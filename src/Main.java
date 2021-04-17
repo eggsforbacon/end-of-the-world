@@ -11,10 +11,12 @@ public class Main {
         BufferedReader jIn = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter jOut = new BufferedWriter(new OutputStreamWriter(System.out));
         clear();
-        jOut.write("-Ingrese un numero de entradas, seguido de las entradas: ");
-        printer.print(readInput(jIn, jOut));
+        System.out.println("-Ingresar un numero N (numero de entradas), pulsar [ENTER], e ir aniadiendo entradas\n-hasta haber presionado [ENTER] N veces:");
+        String solution = readInput(jIn, jOut);
         clear();
-        jOut.write("-La solución es: \n\n" + baseConfiguration + "\n\n-Y queda guardada en " + IO_PATH);
+        printer.print(solution);
+        jOut.write("-La solucion queda guardada en " + IO_PATH);
+
         jIn.close();
         jOut.close();
     }
